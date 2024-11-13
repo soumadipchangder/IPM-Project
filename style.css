@@ -1,0 +1,873 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Inscriptional+Pahlavi&display=swap');
+:root {
+    --clr1: #baa093;
+    --clr2: #eaeaea;
+    --clr3: #000;
+    --clr4: #2c3df5;
+    --clr5: rgb(186, 202, 186);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+html {
+    font-size: 65%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--clr4);
+}
+#menu-title{
+    margin-left: 350px;
+}
+.dropdown {
+    margin: 15px 0;
+    font-family: Arial, sans-serif;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #007BFF; /* Change to your desired focus color */
+    outline: none;
+    background-color: #fff; /* Change background on focus */
+}
+
+option {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Optional: Style for the dropdown container */
+.dropdown {
+    max-width: 300px; /* Set a max-width for the dropdown */
+}
+.user-reviews {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.review-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.review-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-image {
+    width: 100px; /* Set a fixed width for user images */
+    height: 100px; /* Set a fixed height for user images */
+    border-radius: 50%; /* Make images circular */
+    margin-bottom: 10px; /* Space between image and text */
+}
+#user-name{
+    font-size: 16px;
+}
+.review-box h5 {
+    margin: 10px 0;
+}
+
+.review-box p {
+    font-size: 14px;
+    color: #555;
+}
+#user-reviews{
+    padding-left: 50px;
+}
+.rating {
+    font-size: 18px; /* Increase font size for ratings */
+    color: #FFD700; /* Gold color for stars */
+}
+/* General styles for the restaurant section */
+.restaurants {
+    background-color: #fff; /* Background color for the section */
+    padding: 20px; /* Padding around the section */
+}
+
+/* Title styles */
+#res-title {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+    margin-left: 200px;
+}
+
+/* Container for restaurant boxes */
+.restaurant-content {
+    display: flex; /* Use flexbox for horizontal layout */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 20px 0; /* Add some vertical padding */
+    width: 1390px;
+    margin-left: 40px;
+    margin-right: 90px;
+}
+
+
+/* Individual restaurant box styles */
+.restaurant-box {
+    flex: 0 0 auto; /* Prevent flex items from shrinking */
+    width: 200px; /* Set a fixed width for each restaurant box */
+    margin-right: 30px; /* Space between boxes */
+    text-align: center; /* Center text in the box */
+    border: 1px solid #ddd; /* Light border around each box */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside the box */
+    background-color: #f9f9f9; /* Light background for the box */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for restaurant boxes */
+.restaurant-box:hover {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Image styles */
+#res-pics {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+/* Font styles for restaurant names */
+#res-fonts {
+    font-size: 1.2em; /* Increase font size for restaurant names */
+    margin: 10px 0; /* Space above and below the name */
+    color: #333; /* Dark color for text */
+}
+
+/* Average rating styles */
+.average-rating {
+    margin-top: 5px; /* Space above the rating */
+    color: #ff9800; /* Orange color for ratings */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Button styles */
+.btn {
+    background-color: #d32f2f; /* Dark red for the button */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for the button */
+    border-radius: 3px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #c62828; /* Slightly darker red on hover */
+}
+#res-pics{
+    width: 50px;
+    height: 50px;
+}
+#res-fonts{
+    font-size: 18px;
+}
+#review{
+    margin-left: 350px;
+}
+.review-section {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 50px 20px;
+    /* background-color: #fff8e1; Light beige color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background: url(pizzaback1.JPG);
+}
+
+.review-image {
+    flex: 1; /* Take up one part of the flex container */
+    text-align: center; /* Center the image */
+}
+
+.logo-image {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+.review-form {
+    flex: 2; /* Take up two parts of the flex container */
+    padding: 20px; /* Padding for the form */
+}
+
+.review-form h4 {
+    margin-left: 40px;
+    margin-bottom: 20px;
+    color: #fcfcfc; /* Dark red color for the heading */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Dark gray for better readability */
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group input[type="file"] {
+    padding: 5px;
+}
+
+.btn {
+    background-color: #d32f2f; /* Dark red for the button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #c62828; /* Slightly darker red on hover */
+}
+
+#outer-image img{
+    width: 100%;
+    height: 100%;
+}
+#splash{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transition: opacity 1s;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+.video{
+    width: 100%;
+    height: 100%;
+}
+#splash.fade{
+    opacity: 0;
+}
+.btn {
+    margin-top: 2rem;
+    padding: 1.3rem 4rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0rem 2rem 2rem rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: var(--clr3);
+    box-shadow: 0px .2rem 2rem rgba(255, 85, 94, 0.4);
+    color: #c7b5b5;
+    transform: translateY(-1rem);
+}
+
+.btn:active {
+    transform: translateY(-.1rem);
+}
+
+section {
+    padding: 4rem 9%;
+    margin-top: 8rem;
+}
+
+section h3 {
+    font-size: 3rem;
+    color: var(--clr2);
+    text-transform: none;
+    text-align: center;
+    letter-spacing: .2rem;
+}
+
+section h4 {
+    margin: 0 0 1rem 25rem;
+    padding: .2rem;
+    width: 50%;
+    font-size: 3rem;
+    color: var(--clr2);
+    text-transform: none;
+    text-align: center;
+    align-items: center;
+    letter-spacing: .2rem;
+    clip-path: polygon(0% 15%, 25% 28%, 15% 0%, 85% 0%, 70% 28%, 100% 15%, 100% 85%, 67% 70%, 85% 100%, 15% 100%, 28% 66%, 0% 85%);
+    background: var(--clr4);
+}
+
+section h2 {
+    padding: 2rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--clr3);
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+}
+
+section p {
+    color: var(--clr2);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    line-height: 2.5rem;
+    word-wrap: normal;
+}
+
+.head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    background: var(--clr4);
+    color: var(--clr2);
+    padding: 3rem 9%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head h1 {
+    font-size: 2.5rem;
+}
+
+.head .fa-pizza-slice {
+    animation: icon 5s ease infinite;
+}
+
+@keyframes icon {
+    25% {
+        transform: translateY(-1.5rem);
+    }
+    50% {
+        transform: translateY(1.5rem);
+    }
+}
+
+.head .navbar a {
+    color: var(--clr2);
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0 2rem;
+}
+
+.head .navbar a:hover {
+    transition: .4s ease;
+    color: var(--clr3);
+}
+#cart{
+    width: 65px;
+    height: 50px;
+    padding-top: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.head .side-bar i {
+    padding: 1.5rem;
+    font-size: 2.1rem;
+    border: none;
+    background: var(--clr2);
+    color: var(--clr4);
+    
+}
+
+.head .side-bar i:hover {
+    background: var(--clr3);
+    color: var(--clr4);
+    transition: .5s ease all;
+}
+
+#bars {
+    display: none;
+}
+
+.search-bar {
+    height: 7rem;
+    padding: 0 1rem;
+    display: flex;
+    position: absolute;
+    top: 99%;
+    left: 50%;
+    right: 0;
+    align-items: center;
+    background: var(--clr3);
+    border: 2px solid var(--clr4);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 0 0);
+}
+
+.search-bar.active {
+    transition: .2s ease;
+    border: hidden;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
+
+.search-bar input {
+    width: 100%;
+    background: none;
+    border: hidden;
+    text-transform: none;
+    font-size: 1.5rem;
+    color: #ffeded;
+}
+
+
+.home {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(back1.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background: url(pizzaback1.jpg);
+    width: 100%;
+    
+}
+
+.home-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr;
+}
+
+.inner-content {
+    max-width: 70rem;
+    margin-top: 20rem;
+    text-align: center;
+}
+
+.inner-content-img {
+    margin-top: 2rem;
+}
+
+.inner-content-img img {
+    width: 45rem;
+    height: auto;
+    animation: icon 5s ease infinite;
+}
+
+.inner-content i {
+    color: var(--clr4);
+}
+
+
+.about-sec {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr;
+}
+
+.img img {
+    width: 45rem;
+    height: auto;
+    text-align: center;
+    animation: icon 4s ease infinite;
+}
+
+.about-content h3 {
+    background: url(back.png);
+    background-size: cover;
+    background-position: center;
+    color: var(--clr4);
+}
+
+.about-content p {
+    padding-bottom: 2rem;
+    color: var(--clr3);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.about-inner h5 {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 900;
+}
+
+.about-inner h5:hover {
+    transition: 1s ease;
+    transform: translateX(2rem);
+}
+
+.about-inner .fas {
+    color: var(--clr4);
+    padding-right: 1rem;
+}
+
+.about-content .btn {
+    border: .1rem solid var(--clr4);
+}
+
+
+.service-content {
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1.2fr;
+    grid-gap: 1rem;
+}
+
+.service h3 {
+    color: var(--clr4);
+}
+
+.inner-box {
+    padding: 3rem 2rem;
+    text-align: center;
+    border: .1rem solid var(--clr4);
+    background: #eee;
+}
+
+.inner-box:hover {
+    background: var(--clr4);
+    transition: .5s ease all;
+}
+
+.inner-box img {
+    width: 15rem;
+    height: 15rem;
+}
+
+.inner-box p {
+    font-size: 1.3rem;
+    color: var(--clr3);
+}
+
+
+
+.menu-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1.2fr;
+    grid-gap: .5rem;
+    flex-wrap: nowrap;
+}
+
+.in-box {
+    padding: 3rem 4rem;
+    text-align: center;
+    border: .1rem solid var(--clr4);
+    background: #eee;
+}
+
+.in-box:hover {
+    background: var(--clr4);
+    transition: .4s ease all;
+}
+
+.in-box img {
+    width: 20rem;
+    height: auto;
+}
+
+.in-box .far {
+    position: absolute;
+    font-size: 2.5rem;
+    margin-left: -7rem;
+    color: var(--clr3);
+}
+
+.in-box .veg-icon {
+    margin-left: 22rem;
+    position: absolute;
+    width: 3rem;
+}
+
+.star,
+.price {
+    padding: 1rem 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--clr3);
+    text-transform: capitalize;
+}
+
+.fa-star {
+    color: var(--clr5);
+}
+
+.in-box .far {
+    font-size: 2rem;
+    color: var(--clr3);
+}
+
+.in-box .fa-plus-circle {
+    color: var(--clr4);
+}
+
+
+.inner-blog {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1.2fr;
+    grid-gap: 1rem;
+}
+
+.blog-content {
+    position: relative;
+    background: var(--clr2);
+}
+
+.im {
+    height: 20rem;
+    position: relative;
+}
+
+.im img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.in-blog-icon {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-between;
+    background: var(--clr3);
+}
+
+.in-blog-icon a {
+    font-size: 1.5rem;
+    color: var(--clr2);
+    text-transform: capitalize;
+}
+
+.in-blog-icon i {
+    padding-right: .5rem;
+    color: var(--clr2);
+}
+
+.in-blog-content {
+    text-align: center;
+    padding: 2.5rem;
+    background: #eee;
+}
+
+.in-blog-content h2,
+.in-blog-content p {
+    color: var(--clr3);
+}
+
+
+
+.contact {
+    padding-top: 3rem;
+}
+
+.contact-sec {
+    width: 100%;
+}
+
+.contact-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-inner-col {
+    margin: 2rem;
+    flex: 1 1 20rem;
+    text-align: center;
+}
+
+.contact-inner-col img {
+    width: 100%;
+    height: auto;
+    margin: 1.5rem;
+    padding: 1rem;
+}
+
+.contact-inner-col h1 {
+    padding: 1rem 0;
+    color: var(--clr4);
+    font-size: 3rem;
+    letter-spacing: .1rem;
+    text-transform: capitalize;
+}
+
+.contact-inner-col p {
+    padding: .5rem 0;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: #aaa;
+}
+
+.contact-inner-col input,
+.contact-inner-col textarea {
+    width: 80%;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    border: none;
+    border-bottom: .3rem solid var(--clr4);
+}
+
+textarea {
+    resize: none;
+}
+
+.map {
+    border: .1rem solid var(--clr3);
+}
+
+.copyright {
+    display: flex;
+    margin-top: 5rem;
+    padding: 3rem;
+    text-align: center;
+    justify-content: space-between;
+    background: #b5a8a8;
+}
+
+.copyright i {
+    font-size: 2rem;
+    color: var(--clr2);
+}
+
+.copyright p {
+    letter-spacing: .1rem;
+    font-size: 1.5rem;
+    color: var(--clr2);
+}
+
+.social i {
+    padding: 1rem;
+    background: var(--clr4);
+    color: var(--clr2);
+    font-size: 1.5rem;
+}
+
+.social i:hover {
+    transform: translateY(-2rem);
+    color: var(--clr2);
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+
+@media(max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 2rem;
+    }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media(max-width:768px) {
+    #bars {
+        display: inline-block;
+    }
+    section h4 {
+        margin-left: 10rem;
+        text-align: center;
+    }
+    .search-bar input {
+        width: 100%;
+    }
+    .head .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 100%;
+        background: var(--clr3);
+        font-size: 2rem;
+    }
+    .head .navbar a {
+        margin: 2rem 2.5rem;
+        display: block;
+        border-right: .1rem solid var(--clr4);
+    }
+    .head .navbar a:hover {
+        transform: translateX(2rem);
+        transition: 1s ease;
+    }
+    .head .navbar.active {
+        right: .5rem;
+        transition: .4s ease-in;
+    }
+    .home-content {
+        display: inline-block;
+    }
+    .home .home-content {
+        text-align: center;
+    }
+    .home .inner-content-img img {
+        width: 35rem;
+    }
+    .about-sec {
+        display: inline-block;
+    }
+    .service-content,
+    .menu-content,
+    .inner-blog,
+    .contact-inner {
+        display: inline-block;
+    }
+    .menu-content {
+        margin-left: 4rem;
+    }
+    .blog-content,
+    .service-content {
+        padding: 1rem;
+    }
+}
